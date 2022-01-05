@@ -1,0 +1,30 @@
+# BEGIN Expires Headers
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType img/all-devices-white.webp "access plus 1 year"
+ExpiresByType img/board.webp "access plus 1 year"
+ExpiresByType img/dots-bg.webp "access plus 1 year"
+ExpiresByType img/Ensemble-de-livres.webp "access plus 1 year"
+ExpiresByType img/image-de-presentation.webp "access plus 1 month"
+ExpiresByType img/la-chouette-agence-banniere.webp "access plus 1 month"
+ExpiresByType img/la-chouette-agence.webp "access plus 1 month"
+ExpiresByType img/lines-h2-bg.webp "access plus 1 month"
+ExpiresByType img/logo.webp "access plus 1 year"
+ExpiresByType img/texture-paper.webp "access plus 1 year"
+ExpiresByType img/photographe.webp "access plus 1 year"
+ExpiresByType img/materiel-de-photographie.webp "access plus 1 year"
+ExpiresDefault "access plus 2 days"
+</IfModule>
+# END Expires Headers
+
+
+
+
+
+
+
+
+
+
+
+
