@@ -1,3 +1,15 @@
+# Redirection vers https
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+# Redirection vers www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
 # Compression avec gzip
 SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript
@@ -41,12 +53,3 @@ ExpiresByType font/otf "access plus 1 month"
 ExpiresDefault "access plus 2 days"
 </IfModule>
 # END Expires Headers
-
-
-
-
-
-
-
-
-
