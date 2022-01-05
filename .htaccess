@@ -1,24 +1,46 @@
+# Compression avec gzip
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript
+
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+# BEGIN Cache-Control Headers
+<IfModule mod_headers.c>
+<FilesMatch "\.(ico|jpe?g|png|webp|css|gz|eot|ttf|woff|woff2|otf)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+<FilesMatch "\.(js)$">
+Header set Cache-Control "max-age=2592000, private"
+</FilesMatch>
+<filesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=7200, public"
+</filesMatch>
+</IfModule>
+# END Cache-Control Headers
+
 # BEGIN Expires Headers
 <IfModule mod_expires.c>
 ExpiresActive On
-ExpiresByType img/all-devices-white.webp "access plus 1 year"
-ExpiresByType img/board.webp "access plus 1 year"
-ExpiresByType img/dots-bg.webp "access plus 1 year"
-ExpiresByType img/Ensemble-de-livres.webp "access plus 1 year"
-ExpiresByType img/image-de-presentation.webp "access plus 1 month"
-ExpiresByType img/la-chouette-agence-banniere.webp "access plus 1 month"
-ExpiresByType img/la-chouette-agence.webp "access plus 1 month"
-ExpiresByType img/lines-h2-bg.webp "access plus 1 month"
-ExpiresByType img/logo.webp "access plus 1 year"
-ExpiresByType img/texture-paper.webp "access plus 1 year"
-ExpiresByType img/photographe.webp "access plus 1 year"
-ExpiresByType img/materiel-de-photographie.webp "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType text/x-javascript "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+ExpiresByType font/ttf "access plus 1 month"
+ExpiresByType font/woff "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 month"
+ExpiresByType font/otf "access plus 1 month"
+
 ExpiresDefault "access plus 2 days"
 </IfModule>
 # END Expires Headers
-
-
-
 
 
 
