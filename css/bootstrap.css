@@ -1505,7 +1505,7 @@ input[type=submit].btn-block{width:100%}
 tr.collapse.in{display:table-row}
 tbody.collapse.in{display:table-row-group}
 .collapsing{position:relative;height:0;overflow:hidden;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;transition-timing-function:ease;-webkit-transition-duration:.35s;-o-transition-duration:.35s;transition-duration:.35s;-webkit-transition-property:height, visibility;-o-transition-property:height, visibility;transition-property:height, visibility}
-.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px dashed;border-top:4px solid\9;border-right:4px solid transparent;border-left:4px solid transparent}
+.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px dashed;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}
 .dropdown,
 .dropup{position:relative}
 .dropdown-toggle:focus{outline:0}
@@ -1531,7 +1531,7 @@ tbody.collapse.in{display:table-row-group}
 .dropdown-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}
 .pull-right>.dropdown-menu{right:0;left:auto}
 .dropup .caret,
-.navbar-fixed-bottom .dropdown .caret{content:"";border-top:0;border-bottom:4px dashed;border-bottom:4px solid\9}
+.navbar-fixed-bottom .dropdown .caret{content:"";border-top:0;border-bottom:4px dashed;border-bottom:4px solid}
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:2px}
 @media (min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}
