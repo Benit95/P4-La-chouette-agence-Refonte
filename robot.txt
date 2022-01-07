@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://benit95.github.io/P4-La-chouette-agence-Refonte-/sitemap.xml
